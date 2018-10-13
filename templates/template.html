@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/material-icons.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/master.css') }}">
+	<title>
+		Story Teller
+	</title>
+</head>
+
+<body>
+
+	<div class="container pt-3">
+		<nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark rounded mb-3" id="main-nav">
+			<div class="container">
+				<a class="navbar-brand" href="{{ url_for('home') }}"><strong>Story Teller</strong></a>
+
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarcontent" aria-controls="navbarcontent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarcontent">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item">
+							<a class="nav-link" href="{{ url_for('about') }}"><i class="material-icons">info</i> About</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		{% block content %}
+		{% endblock %}
+
+	</div>
+
+	<script src="{{ url_for('static', filename='js/jquery-3.3.1.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/master.js') }}"></script>
+
+	</script>
+</body>
+
+</html>
