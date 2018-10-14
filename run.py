@@ -83,8 +83,6 @@ def text():
         if any(x[0].isupper() for x in t):
             l["entities"].append(' '.join(list(set(t))))
         l["entities"] = list(set(l["entities"]))
-        if len(l["entities"]) == 1 and len([word for word in l["entities"][0].split(' ')]) == 1 and i != 0:
-            l["entities"] = [d["lines"][i - 1]["entities"][0], l["entities"][0]]
         l["content"] = text["content"]
         d["lines"].append(l)
     return json.dumps(d)
