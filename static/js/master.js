@@ -6,7 +6,7 @@ $(document).ready(function() {
             url: '/text',
             type: 'get',
             data: {
-                story: 'hp',
+                story: 'martian',
                 position: cnt
             },
             async: false,
@@ -58,7 +58,7 @@ $(document).ready(function() {
             url: '/text',
             type: 'get',
             data: {
-                story: 'hp',
+                story: 'martian',
                 position: cnt
             },
             beforeSend: function() {
@@ -93,7 +93,7 @@ $(document).ready(function() {
                             type: 'get',
                             data: {
                                 query: line["entities"][k],
-                                terms: 'harry potter'
+                                terms: 'the martian'
                             },
                             async: false,
                             success: function(data) {
